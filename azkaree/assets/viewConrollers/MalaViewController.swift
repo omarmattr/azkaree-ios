@@ -11,6 +11,7 @@ class MalaViewController: UIViewController {
 
     @IBOutlet weak var counter:UIButton!
     @IBAction func btnReset(_ sender:UIButton){
+        
         counter.setTitle("0", for: .normal)
     }
     @IBAction func btnNewAim(_ sender:UIButton){
