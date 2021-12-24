@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fovaritCell" id="gTV-IL-0wX" customClass="ItemFovaritCollectionViewCell" customModule="azkaree" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="239"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="239"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-Uc-Xoh">
+                        <rect key="frame" x="20" y="3" width="348" height="233"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ8-fm-gWY">
+                                <rect key="frame" x="12" y="12" width="324" height="147"/>
+                                <mutableString key="text">أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيمِ
+اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ و
+َمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ 
+وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ 
+حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ. 
+[آية الكرسى - البقرة 255].</mutableString>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gMG-jE-TEn">
+                                <rect key="frame" x="0.0" y="188" width="348" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XsR-uh-7RL">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="45"/>
+                                        <color key="backgroundColor" name="Primary"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="ACk-7M-xBU"/>
+                                        </constraints>
+                                        <color key="tintColor" name="CardColor"/>
+                                        <state key="normal" title="نسخ النص" image="copy"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerBLadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh9-h5-2ol">
+                                        <rect key="frame" x="176.5" y="0.0" width="171.5" height="45"/>
+                                        <color key="backgroundColor" name="Primary"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="i1h-r6-ZY8"/>
+                                        </constraints>
+                                        <color key="tintColor" name="CardColor"/>
+                                        <state key="normal" title="إزالة من المفضلة" image="remove"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerBRRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="CardColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gMG-jE-TEn" secondAttribute="bottom" id="Ktf-vV-xx6"/>
+                            <constraint firstItem="TZ8-fm-gWY" firstAttribute="top" secondItem="gEG-Uc-Xoh" secondAttribute="top" constant="12" id="Oat-1f-0i0"/>
+                            <constraint firstItem="TZ8-fm-gWY" firstAttribute="leading" secondItem="gEG-Uc-Xoh" secondAttribute="leading" constant="12" id="a78-YG-LXq"/>
+                            <constraint firstAttribute="trailing" secondItem="gMG-jE-TEn" secondAttribute="trailing" id="df0-Qq-bbh"/>
+                            <constraint firstItem="gMG-jE-TEn" firstAttribute="leading" secondItem="gEG-Uc-Xoh" secondAttribute="leading" id="n9N-fy-D6P"/>
+                            <constraint firstAttribute="trailing" secondItem="TZ8-fm-gWY" secondAttribute="trailing" constant="12" id="vv1-3q-9gM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gEG-Uc-Xoh" secondAttribute="trailing" constant="20" id="Ear-s2-grb"/>
+                <constraint firstItem="gEG-Uc-Xoh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="lWl-wc-QS4"/>
+                <constraint firstAttribute="bottom" secondItem="gEG-Uc-Xoh" secondAttribute="bottom" constant="3" id="mVt-Dl-OlY"/>
+                <constraint firstItem="gEG-Uc-Xoh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="yRp-TA-lCl"/>
+            </constraints>
+            <size key="customSize" width="388" height="239"/>
+            <point key="canvasLocation" x="376.81159420289856" y="140.95982142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="copy" width="17" height="17"/>
+        <image name="remove" width="20" height="20"/>
+        <namedColor name="CardColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.0" green="0.80400002002716064" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

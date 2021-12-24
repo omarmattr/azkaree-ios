@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCell" id="gTV-IL-0wX" customClass="ItemHomeCollectionViewCell" customModule="azkaree" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="81"/>
+            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="438" height="81"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p0z-Bz-j0X">
+                        <rect key="frame" x="20" y="3" width="398" height="75"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy-night" translatesAutoresizingMaskIntoConstraints="NO" id="NcI-5N-pZ8">
+                                <rect key="frame" x="327" y="8" width="59" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NcI-5N-pZ8" secondAttribute="height" id="kew-d2-7LF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAf-Wb-lTH">
+                                <rect key="frame" x="12" y="8" width="303" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NcI-5N-pZ8" firstAttribute="top" secondItem="p0z-Bz-j0X" secondAttribute="top" constant="8" id="FML-Cl-yOV"/>
+                            <constraint firstItem="SAf-Wb-lTH" firstAttribute="leading" secondItem="p0z-Bz-j0X" secondAttribute="leading" constant="12" id="LaH-Ea-wWi"/>
+                            <constraint firstItem="NcI-5N-pZ8" firstAttribute="leading" secondItem="SAf-Wb-lTH" secondAttribute="trailing" constant="12" id="OW7-l7-rqQ"/>
+                            <constraint firstItem="SAf-Wb-lTH" firstAttribute="top" secondItem="NcI-5N-pZ8" secondAttribute="top" id="UxB-3K-2Ht"/>
+                            <constraint firstAttribute="bottom" secondItem="NcI-5N-pZ8" secondAttribute="bottom" constant="8" id="XXU-nJ-VFA"/>
+                            <constraint firstItem="SAf-Wb-lTH" firstAttribute="bottom" secondItem="NcI-5N-pZ8" secondAttribute="bottom" id="llp-Mf-YO1"/>
+                            <constraint firstAttribute="trailing" secondItem="NcI-5N-pZ8" secondAttribute="trailing" constant="12" id="rOQ-Rt-rXe"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="p0z-Bz-j0X" secondAttribute="trailing" constant="20" id="FKm-lU-8Bp"/>
+                <constraint firstAttribute="bottom" secondItem="p0z-Bz-j0X" secondAttribute="bottom" constant="3" id="c4k-sR-Ay8"/>
+                <constraint firstItem="p0z-Bz-j0X" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="iap-ai-00T"/>
+                <constraint firstItem="p0z-Bz-j0X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="t2d-H9-h4F"/>
+            </constraints>
+            <size key="customSize" width="438" height="81"/>
+            <point key="canvasLocation" x="413.04347826086962" y="88.058035714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cloudy-night" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
