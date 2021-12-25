@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         currentViewControllIndex += 1
         if currentViewControllIndex == splashData.count {
 
-            ConsistentFunction.moveToVC(storyboard :  self.storyboard ,viewC: "SignupViewController")
+            ConstantClass.moveToVC(storyboard :  self.storyboard ,viewC: "SignupViewController")
              return
         }
     
@@ -39,15 +39,12 @@ class ViewController: UIViewController {
         customPV.setViewControllers([startVC], direction: .forward, animated: true, completion: nil)
     }
     @IBAction func btnSkip(_ sender:UIButton){
-        ConsistentFunction.moveToVC(storyboard :  self.storyboard ,viewC: "SignupViewController")
+        ConstantClass.moveToVC(storyboard :  self.storyboard ,viewC: "SignupViewController")
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if UserDefaults.standard.bool(forKey: ConsistentFunction.LOGIN_KEY){
-            ConsistentFunction.moveToVC(storyboard :  self.storyboard ,viewC: "HomeViewController")
-        }
         configViewControll()
     }
 
