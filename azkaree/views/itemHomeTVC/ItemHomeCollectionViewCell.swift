@@ -9,10 +9,8 @@ import UIKit
 
 class ItemHomeCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var mImage:UIImageView!
+    @IBOutlet weak var name:UILabel!
     static func nib() -> UINib {
           return UINib(nibName: "ItemHomeCollectionViewCell", bundle: .main)
       }

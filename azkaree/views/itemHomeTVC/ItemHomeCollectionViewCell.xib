@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="CardColor"/>
                         <constraints>
                             <constraint firstItem="NcI-5N-pZ8" firstAttribute="top" secondItem="p0z-Bz-j0X" secondAttribute="top" constant="8" id="FML-Cl-yOV"/>
                             <constraint firstItem="SAf-Wb-lTH" firstAttribute="leading" secondItem="p0z-Bz-j0X" secondAttribute="leading" constant="12" id="LaH-Ea-wWi"/>
@@ -60,13 +60,17 @@
                 <constraint firstItem="p0z-Bz-j0X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="t2d-H9-h4F"/>
             </constraints>
             <size key="customSize" width="438" height="81"/>
+            <connections>
+                <outlet property="mImage" destination="NcI-5N-pZ8" id="GCG-al-Ss9"/>
+                <outlet property="name" destination="SAf-Wb-lTH" id="kOL-xr-YE6"/>
+            </connections>
             <point key="canvasLocation" x="413.04347826086962" y="88.058035714285708"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="cloudy-night" width="24" height="24"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="CardColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
