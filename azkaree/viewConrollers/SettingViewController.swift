@@ -9,14 +9,27 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
     
 	    }
     
+    @IBAction func btnDark(_ sender:UISwitch){
+    
+        let vaule = sender.isSelected == true
 
+        UIApplication.shared.keyWindow?.overrideUserInterfaceStyle = vaule ? .dark : .light
+
+        let navigationView =   self.navigationController!.navigationBar
+        navigationView.shadowImage = ConstantClass.resizeImage( image:UIImage(named: vaule ? "navbar-n" :  "navbar")!,targetSize: CGSize(width: ConstantClass.SCREEN_WIDTH, height: 10))
+        
+        sender.isSelected = !sender.isSelected
+
+    }
    
+    
     
     @IBAction func sliderButton(_ sender: AnyObject) {
 
