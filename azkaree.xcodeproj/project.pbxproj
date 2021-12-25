@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88F3433C27762A3500DBA8CF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3433B27762A3500DBA8CF /* SettingViewController.swift */; };
 		8A05E7CC277476CC00A25C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E7CB277476CC00A25C7C /* AppDelegate.swift */; };
 		8A05E7CE277476CC00A25C7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E7CD277476CC00A25C7C /* SceneDelegate.swift */; };
 		8A05E7D0277476CC00A25C7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E7CF277476CC00A25C7C /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88F3433B27762A3500DBA8CF /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		8A05E7C8277476CC00A25C7C /* azkaree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = azkaree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A05E7CB277476CC00A25C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A05E7CD277476CC00A25C7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				8A05E80D2774DCDE00A25C7C /* AzkarViewController.swift */,
 				8A05E80F2774E3D300A25C7C /* FavoriteViewController.swift */,
 				8A7A22C32776037300CBD1F6 /* MalaViewController.swift */,
+				88F3433B27762A3500DBA8CF /* SettingViewController.swift */,
 			);
 			path = viewConrollers;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A05E7D0277476CC00A25C7C /* ViewController.swift in Sources */,
+				88F3433C27762A3500DBA8CF /* SettingViewController.swift in Sources */,
 				8A05E7CC277476CC00A25C7C /* AppDelegate.swift in Sources */,
 				8A05E8062774D55A00A25C7C /* ItemHomeCollectionViewCell.swift in Sources */,
 				8A05E80E2774DCDE00A25C7C /* AzkarViewController.swift in Sources */,
@@ -443,7 +447,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2MDBWF2GM;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +467,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2MDBWF2GM;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
