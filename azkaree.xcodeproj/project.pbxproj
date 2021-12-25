@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		88F3433C27762A3500DBA8CF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3433B27762A3500DBA8CF /* SettingViewController.swift */; };
+		88F343412777221700DBA8CF /* SplashDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F343402777221700DBA8CF /* SplashDataViewController.swift */; };
+		88F343442777225800DBA8CF /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F343432777225800DBA8CF /* CustomPageViewController.swift */; };
+		88F343472777228800DBA8CF /* ConsistentFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F343462777228800DBA8CF /* ConsistentFunction.swift */; };
+		88F3434A27773B2D00DBA8CF /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3434927773B2C00DBA8CF /* MyTabBarController.swift */; };
 		8A05E7CC277476CC00A25C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E7CB277476CC00A25C7C /* AppDelegate.swift */; };
 		8A05E7CE277476CC00A25C7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E7CD277476CC00A25C7C /* SceneDelegate.swift */; };
 		8A05E7D0277476CC00A25C7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E7CF277476CC00A25C7C /* ViewController.swift */; };
@@ -29,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		88F3433B27762A3500DBA8CF /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		88F343402777221700DBA8CF /* SplashDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataViewController.swift; sourceTree = "<group>"; };
+		88F343432777225800DBA8CF /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		88F343462777228800DBA8CF /* ConsistentFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsistentFunction.swift; sourceTree = "<group>"; };
+		88F3434927773B2C00DBA8CF /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ../../../../../../Downloads/MyTabBarController.swift; sourceTree = "<group>"; };
 		8A05E7C8277476CC00A25C7C /* azkaree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = azkaree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A05E7CB277476CC00A25C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A05E7CD277476CC00A25C7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +127,9 @@
 		8A05E7E02774777D00A25C7C /* viewConrollers */ = {
 			isa = PBXGroup;
 			children = (
+				88F3434927773B2C00DBA8CF /* MyTabBarController.swift */,
+				88F343432777225800DBA8CF /* CustomPageViewController.swift */,
+				88F343402777221700DBA8CF /* SplashDataViewController.swift */,
 				8A05E7CF277476CC00A25C7C /* ViewController.swift */,
 				8A05E8012774C18A00A25C7C /* HomeViewController.swift */,
 				8A05E80D2774DCDE00A25C7C /* AzkarViewController.swift */,
@@ -210,6 +221,7 @@
 		8A7A22C02774F5EA00CBD1F6 /* utilt */ = {
 			isa = PBXGroup;
 			children = (
+				88F343462777228800DBA8CF /* ConsistentFunction.swift */,
 				8A7A22C12774F62C00CBD1F6 /* ConstantClass.swift */,
 			);
 			path = utilt;
@@ -290,15 +302,19 @@
 			files = (
 				8A05E7D0277476CC00A25C7C /* ViewController.swift in Sources */,
 				88F3433C27762A3500DBA8CF /* SettingViewController.swift in Sources */,
+				88F343472777228800DBA8CF /* ConsistentFunction.swift in Sources */,
 				8A05E7CC277476CC00A25C7C /* AppDelegate.swift in Sources */,
 				8A05E8062774D55A00A25C7C /* ItemHomeCollectionViewCell.swift in Sources */,
 				8A05E80E2774DCDE00A25C7C /* AzkarViewController.swift in Sources */,
+				88F343412777221700DBA8CF /* SplashDataViewController.swift in Sources */,
 				8A05E8142774E44200A25C7C /* ItemFovaritCollectionViewCell.swift in Sources */,
 				8A05E7CE277476CC00A25C7C /* SceneDelegate.swift in Sources */,
+				88F3434A27773B2D00DBA8CF /* MyTabBarController.swift in Sources */,
 				8A7A22C42776037300CBD1F6 /* MalaViewController.swift in Sources */,
 				8A05E8022774C18A00A25C7C /* HomeViewController.swift in Sources */,
 				8A05E8102774E3D300A25C7C /* FavoriteViewController.swift in Sources */,
 				8A7A22C22774F62C00CBD1F6 /* ConstantClass.swift in Sources */,
+				88F343442777225800DBA8CF /* CustomPageViewController.swift in Sources */,
 				8A05E80B2774DBCE00A25C7C /* ItemAzkarCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

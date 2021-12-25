@@ -11,14 +11,6 @@ class FavoriteViewController: UIViewController {
 
     @IBOutlet weak var colectionView:UICollectionView!
 
-    override func viewWillAppear(_ animated: Bool) {
-        ConstantClass.hideNav(self)
-
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        ConstantClass.hideNav(self,false)
-
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

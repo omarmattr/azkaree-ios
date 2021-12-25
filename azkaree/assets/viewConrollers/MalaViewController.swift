@@ -21,14 +21,7 @@ class MalaViewController: UIViewController {
         let newValue = (Int(sender.title(for: .normal)!) ?? 0 )+1
         sender.setTitle(String(newValue), for: .normal)
     }
-    override func viewWillAppear(_ animated: Bool) {
-        ConstantClass.hideNav(self)
-
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        ConstantClass.hideNav(self,false)
-
-    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
