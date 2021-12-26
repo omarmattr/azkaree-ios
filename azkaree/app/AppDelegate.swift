@@ -11,18 +11,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let navigationView =   UINavigationBar.appearance()
-        let bounds = UIScreen.main.bounds
-        let width = bounds.size.width
-        navigationView.shadowImage = resizeImage( image:UIImage(named: "navbar")!,targetSize: CGSize(width: width, height: 10))
+        let navname = window?.overrideUserInterfaceStyle == .dark ? "navbar-n" : "navbar"
+        navigationView.shadowImage = ConstantClass.resizeImage( image:UIImage(named:navname)!,targetSize: CGSize(width: ConstantClass.SCREEN_WIDTH, height: 10))
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
+    // MARK: UISceneSession Lifecycle;'p
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
@@ -36,18 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
-        // This is the rect that we've calculated out and this is what is actually used below
-        let rect = CGRect(origin: .zero, size: targetSize)
-        
-        // Actually do the resizing to the rect using the ImageContext stuff
-        UIGraphicsBeginImageContextWithOptions(targetSize, true, 1.0)
-        image.draw(in: rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage
-    }
+
 }
 extension UIView {
 
