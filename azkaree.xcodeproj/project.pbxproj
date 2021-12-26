@@ -10,8 +10,6 @@
 		88F3433C27762A3500DBA8CF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3433B27762A3500DBA8CF /* SettingViewController.swift */; };
 		88F343412777221700DBA8CF /* SplashDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F343402777221700DBA8CF /* SplashDataViewController.swift */; };
 		88F343442777225800DBA8CF /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F343432777225800DBA8CF /* CustomPageViewController.swift */; };
-		88F343472777228800DBA8CF /* ConsistentFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F343462777228800DBA8CF /* ConsistentFunction.swift */; };
-		88F3434A27773B2D00DBA8CF /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3434927773B2C00DBA8CF /* MyTabBarController.swift */; };
 		8A05E7CC277476CC00A25C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E7CB277476CC00A25C7C /* AppDelegate.swift */; };
 		8A05E7CE277476CC00A25C7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E7CD277476CC00A25C7C /* SceneDelegate.swift */; };
 		8A05E7D0277476CC00A25C7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E7CF277476CC00A25C7C /* ViewController.swift */; };
@@ -29,14 +27,21 @@
 		8A05E8152774E44200A25C7C /* ItemFovaritCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A05E8132774E44200A25C7C /* ItemFovaritCollectionViewCell.xib */; };
 		8A7A22C22774F62C00CBD1F6 /* ConstantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A22C12774F62C00CBD1F6 /* ConstantClass.swift */; };
 		8A7A22C42776037300CBD1F6 /* MalaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A22C32776037300CBD1F6 /* MalaViewController.swift */; };
+		8A7A22C82777487500CBD1F6 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A22C72777487500CBD1F6 /* MyTabBarController.swift */; };
+		8A7A22CA27774AA100CBD1F6 /* ItemHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A22C927774AA100CBD1F6 /* ItemHome.swift */; };
+		8A7A22CE2777537500CBD1F6 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A22CD2777537500CBD1F6 /* JsonReader.swift */; };
+		8A7A22D02777542C00CBD1F6 /* Zekeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A22CF2777542C00CBD1F6 /* Zekeer.swift */; };
+		8A7A22DA27775EBB00CBD1F6 /* data4.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A7A22D627775D5300CBD1F6 /* data4.json */; };
+		8A7A22DB27775EBB00CBD1F6 /* data5.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A7A22D827775E4100CBD1F6 /* data5.json */; };
+		8A7A22DC27775EBB00CBD1F6 /* data3.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A7A22D427775CFC00CBD1F6 /* data3.json */; };
+		8A7A22DD27775EBB00CBD1F6 /* data1.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A7A22CC2777531000CBD1F6 /* data1.json */; };
+		8A7A22DE27775EBB00CBD1F6 /* data2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A7A22D227775C9A00CBD1F6 /* data2.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		88F3433B27762A3500DBA8CF /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		88F343402777221700DBA8CF /* SplashDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataViewController.swift; sourceTree = "<group>"; };
 		88F343432777225800DBA8CF /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
-		88F343462777228800DBA8CF /* ConsistentFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsistentFunction.swift; sourceTree = "<group>"; };
-		88F3434927773B2C00DBA8CF /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ../../../../../../Downloads/MyTabBarController.swift; sourceTree = "<group>"; };
 		8A05E7C8277476CC00A25C7C /* azkaree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = azkaree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A05E7CB277476CC00A25C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A05E7CD277476CC00A25C7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +73,15 @@
 		8A05E8132774E44200A25C7C /* ItemFovaritCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemFovaritCollectionViewCell.xib; sourceTree = "<group>"; };
 		8A7A22C12774F62C00CBD1F6 /* ConstantClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantClass.swift; sourceTree = "<group>"; };
 		8A7A22C32776037300CBD1F6 /* MalaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MalaViewController.swift; sourceTree = "<group>"; };
+		8A7A22C72777487500CBD1F6 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		8A7A22C927774AA100CBD1F6 /* ItemHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHome.swift; sourceTree = "<group>"; };
+		8A7A22CC2777531000CBD1F6 /* data1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data1.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		8A7A22CD2777537500CBD1F6 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8A7A22CF2777542C00CBD1F6 /* Zekeer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zekeer.swift; sourceTree = "<group>"; };
+		8A7A22D227775C9A00CBD1F6 /* data2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data2.json; sourceTree = "<group>"; };
+		8A7A22D427775CFC00CBD1F6 /* data3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data3.json; sourceTree = "<group>"; };
+		8A7A22D627775D5300CBD1F6 /* data4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data4.json; sourceTree = "<group>"; };
+		8A7A22D827775E4100CBD1F6 /* data5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data5.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,8 @@
 		8A05E7CA277476CC00A25C7C /* azkaree */ = {
 			isa = PBXGroup;
 			children = (
+				8A7A22CB277752CB00CBD1F6 /* json-data */,
+				8A05E7E02774777D00A25C7C /* viewConrollers */,
 				8A7A22C02774F5EA00CBD1F6 /* utilt */,
 				8A05E7E5277477D800A25C7C /* app */,
 				8A05E7E4277477BA00A25C7C /* sounds */,
@@ -127,7 +143,7 @@
 		8A05E7E02774777D00A25C7C /* viewConrollers */ = {
 			isa = PBXGroup;
 			children = (
-				88F3434927773B2C00DBA8CF /* MyTabBarController.swift */,
+				8A7A22C72777487500CBD1F6 /* MyTabBarController.swift */,
 				88F343432777225800DBA8CF /* CustomPageViewController.swift */,
 				88F343402777221700DBA8CF /* SplashDataViewController.swift */,
 				8A05E7CF277476CC00A25C7C /* ViewController.swift */,
@@ -143,7 +159,6 @@
 		8A05E7E12774778C00A25C7C /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				8A05E7E02774777D00A25C7C /* viewConrollers */,
 				8A05E7D4277476CE00A25C7C /* Assets.xcassets */,
 			);
 			path = assets;
@@ -152,6 +167,8 @@
 		8A05E7E22774779800A25C7C /* models */ = {
 			isa = PBXGroup;
 			children = (
+				8A7A22C927774AA100CBD1F6 /* ItemHome.swift */,
+				8A7A22CF2777542C00CBD1F6 /* Zekeer.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -221,10 +238,22 @@
 		8A7A22C02774F5EA00CBD1F6 /* utilt */ = {
 			isa = PBXGroup;
 			children = (
-				88F343462777228800DBA8CF /* ConsistentFunction.swift */,
 				8A7A22C12774F62C00CBD1F6 /* ConstantClass.swift */,
+				8A7A22CD2777537500CBD1F6 /* JsonReader.swift */,
 			);
 			path = utilt;
+			sourceTree = "<group>";
+		};
+		8A7A22CB277752CB00CBD1F6 /* json-data */ = {
+			isa = PBXGroup;
+			children = (
+				8A7A22CC2777531000CBD1F6 /* data1.json */,
+				8A7A22D227775C9A00CBD1F6 /* data2.json */,
+				8A7A22D427775CFC00CBD1F6 /* data3.json */,
+				8A7A22D627775D5300CBD1F6 /* data4.json */,
+				8A7A22D827775E4100CBD1F6 /* data5.json */,
+			);
+			path = "json-data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,10 +314,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A05E7D8277476CE00A25C7C /* LaunchScreen.storyboard in Resources */,
+				8A7A22DB27775EBB00CBD1F6 /* data5.json in Resources */,
 				8A05E8152774E44200A25C7C /* ItemFovaritCollectionViewCell.xib in Resources */,
+				8A7A22DD27775EBB00CBD1F6 /* data1.json in Resources */,
 				8A05E7D5277476CE00A25C7C /* Assets.xcassets in Resources */,
 				8A05E7D3277476CC00A25C7C /* Main.storyboard in Resources */,
 				8A05E8072774D55A00A25C7C /* ItemHomeCollectionViewCell.xib in Resources */,
+				8A7A22DE27775EBB00CBD1F6 /* data2.json in Resources */,
+				8A7A22DA27775EBB00CBD1F6 /* data4.json in Resources */,
+				8A7A22DC27775EBB00CBD1F6 /* data3.json in Resources */,
 				8A05E80C2774DBCE00A25C7C /* ItemAzkarCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,19 +336,21 @@
 			files = (
 				8A05E7D0277476CC00A25C7C /* ViewController.swift in Sources */,
 				88F3433C27762A3500DBA8CF /* SettingViewController.swift in Sources */,
-				88F343472777228800DBA8CF /* ConsistentFunction.swift in Sources */,
 				8A05E7CC277476CC00A25C7C /* AppDelegate.swift in Sources */,
+				8A7A22C82777487500CBD1F6 /* MyTabBarController.swift in Sources */,
 				8A05E8062774D55A00A25C7C /* ItemHomeCollectionViewCell.swift in Sources */,
 				8A05E80E2774DCDE00A25C7C /* AzkarViewController.swift in Sources */,
 				88F343412777221700DBA8CF /* SplashDataViewController.swift in Sources */,
 				8A05E8142774E44200A25C7C /* ItemFovaritCollectionViewCell.swift in Sources */,
 				8A05E7CE277476CC00A25C7C /* SceneDelegate.swift in Sources */,
-				88F3434A27773B2D00DBA8CF /* MyTabBarController.swift in Sources */,
 				8A7A22C42776037300CBD1F6 /* MalaViewController.swift in Sources */,
 				8A05E8022774C18A00A25C7C /* HomeViewController.swift in Sources */,
+				8A7A22D02777542C00CBD1F6 /* Zekeer.swift in Sources */,
 				8A05E8102774E3D300A25C7C /* FavoriteViewController.swift in Sources */,
 				8A7A22C22774F62C00CBD1F6 /* ConstantClass.swift in Sources */,
+				8A7A22CA27774AA100CBD1F6 /* ItemHome.swift in Sources */,
 				88F343442777225800DBA8CF /* CustomPageViewController.swift in Sources */,
+				8A7A22CE2777537500CBD1F6 /* JsonReader.swift in Sources */,
 				8A05E80B2774DBCE00A25C7C /* ItemAzkarCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
