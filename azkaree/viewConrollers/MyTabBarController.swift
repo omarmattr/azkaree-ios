@@ -11,15 +11,17 @@ class MyTabBarController: UITabBarController ,UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         self.delegate = self
+        self.navigationItem.title = "الصفحة الرئيسة"
+
 
     }
     // UITabBarDelegate
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         switch  item.tag {
-        case 0: self.navigationItem.title = "Home"
-        case 1: self.navigationItem.title = "Fovarit"
-        case 2: self.navigationItem.title = "Mala"
-        case 3: self.navigationItem.title = "Setting"
+        case 0: self.navigationItem.title = "الصفحة الرئيسة"
+        case 1: self.navigationItem.title = "المفضلة"
+        case 2: self.navigationItem.title = "السبحة"
+        case 3: self.navigationItem.title = "الاعدادات"
         default:
             self.navigationController?.title = "Home"
         }

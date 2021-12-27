@@ -25,26 +25,14 @@ class ViewController: UIViewController {
     @IBOutlet var startBtn :UIButton!
     var currentViewControllIndex = 0
     var customPV:CustomPageViewController!
-    @IBAction func btnNext(_ sender:UIButton){
-        currentViewControllIndex += 1
-        if currentViewControllIndex == splashData.count {
 
-            ConstantClass.moveToVC(storyboard :  self.storyboard ,viewC: "SignupViewController")
-             return
-        }
-    
-        guard let startVC = detailVCAt(index: currentViewControllIndex) else {
-            return
-        }
-        customPV.setViewControllers([startVC], direction: .forward, animated: true, completion: nil)
-    }
-    @IBAction func btnSkip(_ sender:UIButton){
-        ConstantClass.moveToVC(storyboard :  self.storyboard ,viewC: "SignupViewController")
-    }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        UserDefaults.standard.set(true, forKey: ConstantClass.FIRST_OPEN_KEY)
         configViewControll()
     }
 

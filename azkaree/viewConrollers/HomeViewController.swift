@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
         if segue.identifier == "GoToAzkar" {
             let vc = segue.destination as! AzkarViewController
             vc.dataType = cData
+            print(cData)
             
         }
     }
@@ -52,8 +53,12 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        cData = array[indexPath.row].name
         performSegue(withIdentifier: "GoToAzkar", sender: .none)
-        cData = array[indexPath.row].data
+
+     
+        
+        
         
     }
       

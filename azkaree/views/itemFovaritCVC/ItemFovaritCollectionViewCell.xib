@@ -26,13 +26,13 @@
                         <rect key="frame" x="20" y="3" width="348" height="233"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ8-fm-gWY">
-                                <rect key="frame" x="12" y="12" width="324" height="147"/>
-                                <mutableString key="text">أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيمِ
+                                <rect key="frame" x="12" y="12" width="324" height="148"/>
+                                <string key="text">أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيمِ
 اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ و
 َمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ 
 وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ 
 حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ. 
-[آية الكرسى - البقرة 255].</mutableString>
+[آية الكرسى - البقرة 255].</string>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,6 +53,9 @@
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnCopy:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4bt-Ko-9pL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh9-h5-2ol">
                                         <rect key="frame" x="176.5" y="0.0" width="171.5" height="45"/>
@@ -67,6 +70,9 @@
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnCancel:" destination="gTV-IL-0wX" eventType="touchUpInside" id="B5q-g0-cPZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -97,6 +103,9 @@
                 <constraint firstItem="gEG-Uc-Xoh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="yRp-TA-lCl"/>
             </constraints>
             <size key="customSize" width="388" height="239"/>
+            <connections>
+                <outlet property="zekeer" destination="TZ8-fm-gWY" id="lVn-X3-gFd"/>
+            </connections>
             <point key="canvasLocation" x="376.81159420289856" y="140.95982142857142"/>
         </collectionViewCell>
     </objects>

@@ -13,9 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if UserDefaults.standard.bool(forKey: ConstantClass.FIRST_OPEN_KEY){
+         self.window?.rootViewController?.performSegue(withIdentifier: "goToHome", sender: .none)
+        }
+        self.window?.overrideUserInterfaceStyle = UserDefaults.standard.bool(forKey:  ConstantClass.IS_DARK) ? .dark : .light
+      
         let navigationView =   UINavigationBar.appearance()
-        let navname = window?.overrideUserInterfaceStyle == .dark ? "navbar-n" : "navbar"
-        navigationView.shadowImage = ConstantClass.resizeImage( image:UIImage(named:navname)!,targetSize: CGSize(width: ConstantClass.SCREEN_WIDTH, height: 10))
+        let name = UserDefaults.standard.bool(forKey:  ConstantClass.IS_DARK) ? "navbar-n" : "navbar"
+        navigationView.shadowImage = ConstantClass.resizeImage( image:UIImage(named:name)!,targetSize: CGSize(width: ConstantClass.SCREEN_WIDTH, height: 10))
         return true
     }
 
