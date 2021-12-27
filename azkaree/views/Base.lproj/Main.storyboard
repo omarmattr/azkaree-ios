@@ -243,6 +243,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="3" title="" image="settings" id="OWv-qZ-GE7"/>
+                    <connections>
+                        <outlet property="btnSwitch" destination="0Zn-ck-xiu" id="903-MC-glx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGm-xe-iEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

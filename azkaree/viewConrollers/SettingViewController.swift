@@ -13,8 +13,11 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        btnSwitch.isSelected = !ConstantClass.USER_DEFAULTS.bool(forKey: ConstantClass.IS_DARK)
     
 	    }
+    
+    @IBOutlet var  btnSwitch:UISwitch!
     
     @IBAction func btnDark(_ sender:UISwitch){
     
@@ -22,11 +25,14 @@ class SettingViewController: UIViewController {
 
         UIApplication.shared.keyWindow?.overrideUserInterfaceStyle = vaule ? .dark : .light
 
-        let navigationView =   self.navigationController!.navigationBar
-        navigationView.shadowImage = ConstantClass.resizeImage( image:UIImage(named: vaule ? "navbar-n" :  "navbar")!,targetSize: CGSize(width: ConstantClass.SCREEN_WIDTH, height: 10))
+//        let navigationView =   self.navigationController!.navigationBar
+//        navigationView.shadowImage = ConstantClass.resizeImage( image:UIImage(named: vaule ? "navbar-n" :  "navbar")!,targetSize: CGSize(width: ConstantClass.SCREEN_WIDTH, height: 10))
         
         sender.isSelected = !sender.isSelected
-
+        
+        
+        ConstantClass.USER_DEFAULTS
+            .set(!vaule, forKey: ConstantClass.IS_DARK)
     }
    
     

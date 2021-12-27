@@ -39,6 +39,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configViewControll()
         
+        let vaule =  ConstantClass.USER_DEFAULTS.bool(forKey: ConstantClass.IS_DARK)
+        UIApplication.shared.keyWindow?.overrideUserInterfaceStyle = vaule ? .dark : .light
+        
         if ConstantClass.USER_DEFAULTS.bool(forKey: ConstantClass.FIRST_OPEN_KEY) {
             ConstantClass.moveToVC(storyboard :  self.storyboard ,viewC: ConstantClass.ID_MAIN_CONTROLLER)
             
