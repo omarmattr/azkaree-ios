@@ -462,6 +462,9 @@
                                                 <exclude reference="NVJ-oK-N7D"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="btnM:" destination="nkW-DI-qYs" eventType="touchUpInside" id="MIp-Ja-CGF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e6-Px-A1T">
                                         <rect key="frame" x="189" y="0.0" width="185" height="45"/>
@@ -478,6 +481,9 @@
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnS:" destination="nkW-DI-qYs" eventType="touchUpInside" id="gEv-z0-763"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

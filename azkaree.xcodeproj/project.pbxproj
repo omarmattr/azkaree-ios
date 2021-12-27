@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8851B0062779F67200FECDB0 /* s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8851B0052779F67100FECDB0 /* s.mp3 */; };
+		8851B0092779F67500FECDB0 /* m.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8851B0082779F67500FECDB0 /* m.mp3 */; };
 		88F3433C27762A3500DBA8CF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3433B27762A3500DBA8CF /* SettingViewController.swift */; };
 		88F343412777221700DBA8CF /* SplashDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F343402777221700DBA8CF /* SplashDataViewController.swift */; };
 		88F343442777225800DBA8CF /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F343432777225800DBA8CF /* CustomPageViewController.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8851B0052779F67100FECDB0 /* s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = s.mp3; path = ../../../../../Downloads/s.mp3; sourceTree = "<group>"; };
+		8851B0082779F67500FECDB0 /* m.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = m.mp3; path = ../../../../../Downloads/m.mp3; sourceTree = "<group>"; };
 		88F3433B27762A3500DBA8CF /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		88F343402777221700DBA8CF /* SplashDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataViewController.swift; sourceTree = "<group>"; };
 		88F343432777225800DBA8CF /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8851B0042779F66B00FECDB0 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				8851B0082779F67500FECDB0 /* m.mp3 */,
+				8851B0052779F67100FECDB0 /* s.mp3 */,
+			);
+			path = sound;
+			sourceTree = "<group>";
+		};
 		8A05E7BF277476CC00A25C7C = {
 			isa = PBXGroup;
 			children = (
@@ -115,11 +128,11 @@
 		8A05E7CA277476CC00A25C7C /* azkaree */ = {
 			isa = PBXGroup;
 			children = (
+				8851B0042779F66B00FECDB0 /* sound */,
 				8A7A22CB277752CB00CBD1F6 /* json-data */,
 				8A05E7E02774777D00A25C7C /* viewConrollers */,
 				8A7A22C02774F5EA00CBD1F6 /* utilt */,
 				8A05E7E5277477D800A25C7C /* app */,
-				8A05E7E4277477BA00A25C7C /* sounds */,
 				8A05E7E3277477AD00A25C7C /* fonts */,
 				8A05E7E22774779800A25C7C /* models */,
 				8A05E7E12774778C00A25C7C /* assets */,
@@ -190,13 +203,6 @@
 				8A05E7EB27747EE400A25C7C /* Roboto-ThinItalic.ttf */,
 			);
 			path = fonts;
-			sourceTree = "<group>";
-		};
-		8A05E7E4277477BA00A25C7C /* sounds */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = sounds;
 			sourceTree = "<group>";
 		};
 		8A05E7E5277477D800A25C7C /* app */ = {
@@ -319,6 +325,8 @@
 				8A7A22DD27775EBB00CBD1F6 /* data1.json in Resources */,
 				8A05E7D5277476CE00A25C7C /* Assets.xcassets in Resources */,
 				8A05E7D3277476CC00A25C7C /* Main.storyboard in Resources */,
+				8851B0062779F67200FECDB0 /* s.mp3 in Resources */,
+				8851B0092779F67500FECDB0 /* m.mp3 in Resources */,
 				8A05E8072774D55A00A25C7C /* ItemHomeCollectionViewCell.xib in Resources */,
 				8A7A22DE27775EBB00CBD1F6 /* data2.json in Resources */,
 				8A7A22DA27775EBB00CBD1F6 /* data4.json in Resources */,
