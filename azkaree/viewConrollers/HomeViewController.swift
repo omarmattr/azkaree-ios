@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 class HomeViewController: UIViewController {
 
@@ -15,7 +16,7 @@ class HomeViewController: UIViewController {
     private let array = ItemHome.getData()
     @IBOutlet weak var tableView:UICollectionView!
     
-    var player: AVAudioPlayer?
+    var player: AVPlayer?
 
     @IBAction func btnS(_ sender:UIButton){
         playSound("s")
@@ -28,6 +29,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      //  ConstantClass.set()
         tableView.register(ItemHomeCollectionViewCell.nib(), forCellWithReuseIdentifier: ItemHomeCollectionViewCell.identfier)
 
 
@@ -45,19 +47,93 @@ class HomeViewController: UIViewController {
 
 
     func playSound(_ pmNmae:String) {
-        let url = Bundle.main.url(forResource:pmNmae, withExtension: "mp3")
+        
+        let path = Bundle.main.url(forResource:pmNmae, withExtension: "mp3")
+
+         do{
+             try player = AVPlayer(url: path!)
+            setupAVAudioSession()
+         } catch {
+             print("File is not Loaded")
+         }
+//         let session = AVAudioSession.sharedInstance()
+//         do{
+//            try session.setCategory(AVAudioSession.Category.playback)
+//
+//         }
+//         catch{
+//         }
+       
+       // player!.play()
+//        let url = Bundle.main.url(forResource:pmNmae, withExtension: "mp3")
+//        do {
+//            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
+//            print("Playback OK")
+//            try AVAudioSession.sharedInstance().setActive(true)
+//            print("Session is Active")
+//            player = try AVAudioPlayer(contentsOf: url!)
+//
+//        } catch {
+//            print(error)
+//        }
+//        guard let player = player else { return }
+//
+//        player.prepareToPlay()
+//        player.play()
+//    }
+    }
+    private func setupAVAudioSession() {
+        let session = AVAudioSession.sharedInstance()
 
         do {
-            player = try AVAudioPlayer(contentsOf: url!)
-            guard let player = player else { return }
-
-            player.prepareToPlay()
-            player.play()
-
-        } catch let error as NSError {
-            print(error.description)
+            try session.setCategory(AVAudioSession.Category.playback)
+          //  try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+            //try AVAudioSession.sharedInstance().setActive(true)
+            debugPrint("AVAudioSession is Active and Category Playback is set")
+            UIApplication.shared.beginReceivingRemoteControlEvents()
+            setupCommandCenter()
+        } catch {
+            debugPrint("Error: \(error)")
         }
     }
+    private func setupCommandCenter() {
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyTitle: "azkaree"]
+        self.player?.play()
+        let commandCenter = MPRemoteCommandCenter.shared()
+        commandCenter.playCommand.isEnabled = true
+        commandCenter.pauseCommand.isEnabled = true
+        
+        commandCenter.playCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
+            self?.player?.play()
+            return .success
+        }
+        commandCenter.nextTrackCommand.addTarget { [unowned self] (event)  in
+            let path = Bundle.main.url(forResource:"m", withExtension: "mp3")
+            player = AVPlayer(url: path!)
+            player?.play()
+            return .success
+        }
+        commandCenter.previousTrackCommand.addTarget { [unowned self] (event)  in
+            let path = Bundle.main.url(forResource:"s", withExtension: "mp3")
+            player = AVPlayer(url: path!)
+            player?.play()
+            return .success
+        }
+        commandCenter.pauseCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
+            self?.player?.pause()
+            return .success
+        }
+        commandCenter.changePlaybackPositionCommand.addTarget { event in
+            print("Asdfasdfasdfas \(event)")
+            let event = event as! MPChangePlaybackPositionCommandEvent
+         
+            self.player?.seek(to: CMTimeMakeWithSeconds(         event.positionTime,       preferredTimescale: 1000000
+))
+            return MPRemoteCommandHandlerStatus.success
+        }
+    }
+
+    
 }
 extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

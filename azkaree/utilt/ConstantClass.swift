@@ -24,7 +24,40 @@ class ConstantClass{
     static let TYPE_3 = "أذكار النوم"
     static let TYPE_4 = "أذكار الاستيقاظ من النوم"
 
+    static func set() {
 
+        // Configure the notification's content.
+        let content = UNMutableNotificationContent()
+        content.title = NSString.localizedUserNotificationString(forKey: "K.Keys.notificationTitle", arguments: nil)
+        content.body = NSString.localizedUserNotificationString(forKey: "K.Keys.notificationBody", arguments: nil)
+
+        // Get sound name
+      //  let soundName: String = UserDefaultsManager.getAlarmSound().fileNameFull
+            
+        // Set sound
+        let url = Bundle.main.path(forResource:"m", ofType: "mp3")
+
+        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: url!))
+        content.categoryIdentifier = "Alarm"
+
+        // Configure the time the notification should occur.
+        var date = DateComponents()
+        date.hour = 0 //alarm.hour
+        date.minute = 1 //alarm.minute
+
+        // Create the trigger & request
+        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
+        let request = UNNotificationRequest(identifier: "xx", content: content, trigger: trigger)
+
+        // Schedule the request with the system.
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request, withCompletionHandler: { error in
+            if error != nil {
+                // TODO: Show Alert for Error
+                return
+            }
+        })
+    }
    static func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
         // This is the rect that we've calculated out and this is what is actually used below
         let rect = CGRect(origin: .zero, size: targetSize)
