@@ -12,31 +12,18 @@ class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        btnSwitch.isSelected = !ConstantClass.USER_DEFAULTS.bool(forKey: ConstantClass.IS_DARK)
-    
+        mySwitch.isOn =  UserDefaults.standard.bool(forKey: ConstantClass.IS_DARK)
 	    }
     
-    @IBOutlet var  btnSwitch:UISwitch!
-    
+    @IBOutlet weak var mySwitch:UISwitch!
     @IBAction func btnDark(_ sender:UISwitch){
-    
-        let vaule = sender.isSelected == true
+        UserDefaults.standard.set(sender.isOn , forKey: ConstantClass.IS_DARK)
+        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.overrideUserInterfaceStyle = sender.isOn ? .dark : .light
+        let name = sender.isOn ? "navbar-n" : "navbar"
+        self.navigationController?.navigationBar.shadowImage = ConstantClass.resizeImage( image:UIImage(named:name)!,targetSize: CGSize(width: ConstantClass.SCREEN_WIDTH, height: 10))
 
-        UIApplication.shared.keyWindow?.overrideUserInterfaceStyle = vaule ? .dark : .light
+	    }
 
-//        let navigationView =   self.navigationController!.navigationBar
-//        navigationView.shadowImage = ConstantClass.resizeImage( image:UIImage(named: vaule ? "navbar-n" :  "navbar")!,targetSize: CGSize(width: ConstantClass.SCREEN_WIDTH, height: 10))
-        
-        sender.isSelected = !sender.isSelected
-        
-        
-        ConstantClass.USER_DEFAULTS
-            .set(!vaule, forKey: ConstantClass.IS_DARK)
-    }
-   
-    
-    
     @IBAction func sliderButton(_ sender: AnyObject) {
 
         //get the Slider values from UserDefaults

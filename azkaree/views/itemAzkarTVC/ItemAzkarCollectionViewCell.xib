@@ -125,6 +125,7 @@
             <size key="customSize" width="333" height="248"/>
             <connections>
                 <outlet property="btnCounter" destination="RO2-kg-JsN" id="e6n-ey-rqx"/>
+                <outlet property="btnLove" destination="a0T-Zo-FWq" id="mzv-Ur-TbY"/>
                 <outlet property="zekeer" destination="YEz-t6-q7X" id="5Wd-VC-JIa"/>
             </connections>
             <point key="canvasLocation" x="335.50724637681162" y="143.97321428571428"/>

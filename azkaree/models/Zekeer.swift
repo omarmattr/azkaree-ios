@@ -7,5 +7,6 @@
 
 struct Zekeer:Codable {
     let category, count, description, reference,zekr: String
+    let isLove:Bool
     
 }

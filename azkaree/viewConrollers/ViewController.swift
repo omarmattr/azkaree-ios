@@ -26,7 +26,8 @@ class ViewController: UIViewController {
     @IBOutlet var startBtn :UIButton!
     var currentViewControllIndex = 0
     var customPV:CustomPageViewController!
-    
+
+
     @IBAction func btnSkip(_ sender:UIButton){
         ConstantClass.moveToVC(storyboard :  self.storyboard ,viewC: ConstantClass.ID_MAIN_CONTROLLER)
         
@@ -35,8 +36,13 @@ class ViewController: UIViewController {
     }
     
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        UserDefaults.standard.set(true, forKey: ConstantClass.FIRST_OPEN_KEY)
         configViewControll()
         
         let vaule =  ConstantClass.USER_DEFAULTS.bool(forKey: ConstantClass.IS_DARK)
