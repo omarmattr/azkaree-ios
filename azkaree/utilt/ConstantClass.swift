@@ -8,8 +8,11 @@
 import UIKit
 class ConstantClass{
     
-    static let FIRST_OPEN_KEY = "isFirst"
+
+    static  let USER_DEFAULTS = UserDefaults.standard
     static let IS_DARK = "isDark"
+   static let FIRST_OPEN_KEY = "isFirst"
+    static let ID_MAIN_CONTROLLER = "MainViewControler"
     static let SCREEN_WIDTH =  UIScreen.main.bounds.size.width
     static let LOVE_ARR = "loves"
     static let AIM = "aim"

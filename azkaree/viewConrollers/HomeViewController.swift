@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HomeViewController: UIViewController {
 
@@ -13,6 +14,18 @@ class HomeViewController: UIViewController {
     private var cData = ""
     private let array = ItemHome.getData()
     @IBOutlet weak var tableView:UICollectionView!
+    
+    var player: AVAudioPlayer?
+
+    @IBAction func btnS(_ sender:UIButton){
+        playSound("s")
+
+    }
+    
+    @IBAction func btnM(_ sender:UIButton){
+        playSound("m")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(ItemHomeCollectionViewCell.nib(), forCellWithReuseIdentifier: ItemHomeCollectionViewCell.identfier)
@@ -31,6 +44,20 @@ class HomeViewController: UIViewController {
     }
 
 
+    func playSound(_ pmNmae:String) {
+        let url = Bundle.main.url(forResource:pmNmae, withExtension: "mp3")
+
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            guard let player = player else { return }
+
+            player.prepareToPlay()
+            player.play()
+
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
 }
 extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

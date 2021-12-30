@@ -20,12 +20,22 @@ class ViewController: UIViewController {
 عليك مع تطبيق أذكار
 """),
                               SplashItem(photo: UIImage(named: "splash-3")!, text: "")]
+   
     @IBOutlet var contentView :UIView!
     @IBOutlet var contentNotificationView :UIView!
     @IBOutlet var startBtn :UIButton!
     var currentViewControllIndex = 0
     var customPV:CustomPageViewController!
 
+
+    @IBAction func btnSkip(_ sender:UIButton){
+        ConstantClass.moveToVC(storyboard :  self.storyboard ,viewC: ConstantClass.ID_MAIN_CONTROLLER)
+        
+        ConstantClass.USER_DEFAULTS
+            .set(true, forKey: ConstantClass.FIRST_OPEN_KEY)
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +44,25 @@ class ViewController: UIViewController {
         
         UserDefaults.standard.set(true, forKey: ConstantClass.FIRST_OPEN_KEY)
         configViewControll()
+        
+        let vaule =  ConstantClass.USER_DEFAULTS.bool(forKey: ConstantClass.IS_DARK)
+        UIApplication.shared.keyWindow?.overrideUserInterfaceStyle = vaule ? .dark : .light
+        
+        if ConstantClass.USER_DEFAULTS.bool(forKey: ConstantClass.FIRST_OPEN_KEY) {
+            ConstantClass.moveToVC(storyboard :  self.storyboard ,viewC: ConstantClass.ID_MAIN_CONTROLLER)
+            
+        }
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
-            self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
     }
-
- 
+    
+    
     func configViewControll()  {
         guard let pageViewControll = storyboard?.instantiateViewController(withIdentifier: String(describing:  CustomPageViewController.self))as? CustomPageViewController else {
             return
@@ -59,15 +77,15 @@ class ViewController: UIViewController {
         contentView.addSubview(pageViewControll.view)
         let views :[String:Any] = ["pageView": pageViewControll.view!]
         let constH = NSLayoutConstraint.constraints(withVisualFormat: "H:|[pageView]|", options: .alignAllCenterY, metrics: nil, views: views)
-            view.addConstraints(constH)
+        view.addConstraints(constH)
         let constW = NSLayoutConstraint.constraints(withVisualFormat: "V:|[pageView]|", options: .alignAllCenterX, metrics: nil, views: views)
-            view.addConstraints(constW)
+        view.addConstraints(constW)
         guard let startVC = detailVCAt(index: currentViewControllIndex) else {
             return
         }
         pageViewControll.setViewControllers([startVC], direction: .forward, animated: true, completion: nil)
         
-        }
+    }
     
     func detailVCAt(index:Int) -> SplashDataViewController?{
         if index >= splashData.count {
@@ -80,7 +98,7 @@ class ViewController: UIViewController {
         PostDataVC.data = splashData[index]
         return PostDataVC
     }
-
+    
 }
 
 extension ViewController:UIPageViewControllerDelegate,UIPageViewControllerDataSource{
@@ -90,7 +108,7 @@ extension ViewController:UIPageViewControllerDelegate,UIPageViewControllerDataSo
             return nil
         }
         currentViewControllIndex = index
-
+        
         contentNotificationView.isHidden = true
         startBtn.isHidden = true
         
@@ -106,13 +124,13 @@ extension ViewController:UIPageViewControllerDelegate,UIPageViewControllerDataSo
         guard var index = dataVC?.index else {
             return nil
         }
-       
+        
         if index == splashData.count{
             return nil
         }
         index += 1
         currentViewControllIndex = index
- 
+        
         
         if index == 3{
             contentNotificationView.isHidden = false
@@ -132,18 +150,18 @@ extension ViewController:UIPageViewControllerDelegate,UIPageViewControllerDataSo
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "goToHome"{
-                let aaa = segue.destination as! UITabBarController
-                aaa.navigationItem.hidesBackButton = true
-                
-            }
+        if segue.identifier == "goToHome"{
+            let aaa = segue.destination as! UITabBarController
+            aaa.navigationItem.hidesBackButton = true
+            
         }
+    }
 }
 
 
 struct SplashItem{
-   let photo :UIImage
-   let text :String
+    let photo :UIImage
+    let text :String
 }
 
 

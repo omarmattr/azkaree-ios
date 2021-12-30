@@ -13,7 +13,6 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mySwitch.isOn =  UserDefaults.standard.bool(forKey: ConstantClass.IS_DARK)
-    
 	    }
     
     @IBOutlet weak var mySwitch:UISwitch!
@@ -22,10 +21,9 @@ class SettingViewController: UIViewController {
         UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.overrideUserInterfaceStyle = sender.isOn ? .dark : .light
         let name = sender.isOn ? "navbar-n" : "navbar"
         self.navigationController?.navigationBar.shadowImage = ConstantClass.resizeImage( image:UIImage(named:name)!,targetSize: CGSize(width: ConstantClass.SCREEN_WIDTH, height: 10))
-    }
-   
-    
-    
+
+	    }
+
     @IBAction func sliderButton(_ sender: AnyObject) {
 
         //get the Slider values from UserDefaults

@@ -119,6 +119,7 @@ extension UIView {
         layer.shadowOpacity = shadowOpacity
         layer.shadowRadius = shadowRadius
     }
+    
 }
 extension Double {
     func splitAtDecimal() -> [Int] {
